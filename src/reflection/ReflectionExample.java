@@ -14,6 +14,7 @@ public class ReflectionExample {
 		int[] ar = new int[5];
 		System.out.println("ar.getClass().isArray(): "+ar.getClass().isArray());
 		System.out.println("ar.getClass().isPrimitive(): "+ar.getClass().isPrimitive());
+		System.out.println("c.getSuperClass(): "+c.getSuperclass());
 		
 	}
 
