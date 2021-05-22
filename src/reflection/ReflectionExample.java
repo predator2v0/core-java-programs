@@ -6,6 +6,8 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 
+import jdk.nashorn.internal.ir.ForNode;
+
 public class ReflectionExample {
 
 	public static void main(String[] args) throws ClassNotFoundException,NoSuchMethodException,SecurityException {
@@ -39,6 +41,15 @@ public class ReflectionExample {
 		System.out.println("all constructors from specified class and its super class: "+Arrays.toString(clC));
 		
 		System.out.println("c.getMethod(\"display\",null): "+c.getMethod("display",null));
+		
+		ReflectionStudent rs = new ReflectionStudent(102,"carter",45.0);		
+		System.out.println(rs.getClass());
+		
+		Class name = ReflectionStudent.class;
+		System.out.println(name);
+		
+		Class x = Class.forName("java.lang.String");
+		System.out.println(x.getName());
 	}
 
 }
