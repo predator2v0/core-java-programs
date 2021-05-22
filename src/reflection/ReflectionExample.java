@@ -8,7 +8,7 @@ import java.util.Arrays;
 
 public class ReflectionExample {
 
-	public static void main(String[] args) throws ClassNotFoundException {
+	public static void main(String[] args) throws ClassNotFoundException,NoSuchMethodException,SecurityException {
 		Class c =  Class.forName("reflection.ReflectionStudent");
 		Class i = Class.forName("reflection.ReflectionInterface");
 		System.out.println("c.getName(): "+c.getName());
@@ -27,9 +27,18 @@ public class ReflectionExample {
 		System.out.println("all declared methods in the student class: "+Arrays.toString(cMethods));
 		
 		Constructor<?> []cConstructors = c.getDeclaredConstructors();
-		System.out.println("all declared Constructors are "+Arrays.toString(cConstructors));
+		System.out.println("all declared Constructors are: "+Arrays.toString(cConstructors));
 		
+		Field []clF = c.getFields();
+		System.out.println("all fields from specified class and its super class: "+Arrays.toString(clF));
 		
+		Method []clM = c.getMethods();
+		System.out.println("all methods from specified class and its super class: "+Arrays.toString(clM));
+		
+		Constructor<?> []clC = c.getConstructors();
+		System.out.println("all constructors from specified class and its super class: "+Arrays.toString(clC));
+		
+		System.out.println("c.getMethod(\"display\",null): "+c.getMethod("display",null));
 	}
 
 }
