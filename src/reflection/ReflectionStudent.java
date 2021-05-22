@@ -1,6 +1,6 @@
 package reflection;
 
-public class ReflectionStudent {
+public class ReflectionStudent implements ReflectionInterface {
 	private int roll;
 	private String name;
 	private double marks;
@@ -73,6 +73,12 @@ public class ReflectionStudent {
 	public static void main(String[] args) {
 		ReflectionStudent reflectionStudent =  new ReflectionStudent(01,"cdsd",565);
 		System.out.println(reflectionStudent.toString());
+	}
+	@Override
+	public void display() {
+		// TODO Auto-generated method stub
+		System.out.println("hello");
+		
 	}
 
 }
