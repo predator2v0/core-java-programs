@@ -32,13 +32,13 @@ public class ReflectionExample {
 		System.out.println("all declared Constructors are: "+Arrays.toString(cConstructors));
 		
 		Field []clF = c.getFields();
-		System.out.println("all fields from specified class and its super class: "+Arrays.toString(clF));
+		System.out.println("all public fields from specified class and its super class: "+Arrays.toString(clF));
 		
 		Method []clM = c.getMethods();
-		System.out.println("all methods from specified class and its super class: "+Arrays.toString(clM));
+		System.out.println("all public methods from specified class and its super class: "+Arrays.toString(clM));
 		
 		Constructor<?> []clC = c.getConstructors();
-		System.out.println("all constructors from specified class and its super class: "+Arrays.toString(clC));
+		System.out.println("all public constructors from specified class and its super class: "+Arrays.toString(clC));
 		
 		System.out.println("c.getMethod(\"display\",null): "+c.getMethod("display",null));
 		
