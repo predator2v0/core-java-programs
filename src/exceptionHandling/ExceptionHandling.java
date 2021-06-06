@@ -35,12 +35,12 @@ public class ExceptionHandling extends CustomExceptionHandler {
 		try (Scanner sc = new Scanner(System.in)) {
 			System.out.println("enter a number");
 			int number = sc.nextInt();
-			number = number/0;
+			number = number / 0;
 		} catch (Exception e) {
 			System.out.println("5. Exception:" + e);
 		}
 		// java 9 onwards supports resource declaration outside of the try();
-		Scanner s = new Scanner(System.in);
+//		Scanner s = new Scanner(System.in);
 //        try (s) {	/* java 9 onwards*/
 //		try {
 //			System.out.println("enter a String:");
@@ -65,6 +65,6 @@ public class ExceptionHandling extends CustomExceptionHandler {
 			System.out.println(eh instanceof CustomExceptionHandler);
 			System.out.println(ceh instanceof ExceptionHandling);
 		}
-		s.close();
+//		s.close();
 	}
 }
