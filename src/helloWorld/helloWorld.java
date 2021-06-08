@@ -13,8 +13,9 @@ class helloWorld {
 	}
 //	Instance data member.
 	int h = 5;
-
+//	main method starts
 	public static void main(String args[]) {
+//		creating object of helloWorld class.(initializer block will be executed)
 		helloWorld h = new helloWorld();
 		System.out.println(h.h);
 		System.out.println("Hello World Program!!");
