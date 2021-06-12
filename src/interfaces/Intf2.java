@@ -1,6 +1,11 @@
 package interfaces;
 
+/*
+ * by default, all the data members of the interface are public static final, and all the methods are public abstract, even if they are not
+ * declared so.
+ */
 interface Intf2 {
+//	public static final data members of the interface.
 	int id = 9;
 	int m = 6;
 
@@ -10,8 +15,11 @@ interface Intf2 {
 //
 //	}
 
+//	public abstract method of the interface
+
 	void show();
 
+//	default method of the interface(java 8 onwards)
 	default void defaultMethod() {
 		System.out.println("default method inside interface");
 		System.out.println("calling private method from default method");
