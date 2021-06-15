@@ -1,19 +1,20 @@
 package methods;
 
 public class ObjMethod {
-    String name;
-    int id;
+	String name;
+	int id;
 
-    ObjMethod(String st, int dd) {
-        name = st;
-        id = dd;
-    }
-    public ObjMethod() {
-    	this.id = 0;
-    	this.name = null;
-    }
+	ObjMethod(String st, int dd) {
+		name = st;
+		id = dd;
+	}
+//	public constructor
+	public ObjMethod() {
+		this.id = 0;
+		this.name = null;
+	}
 
-    public void sayHello() {
-        System.out.println("hello! Subhakanta here.");
-    }
+	public void sayHello() {
+		System.out.println("hello! Subhakanta here.");
+	}
 }
